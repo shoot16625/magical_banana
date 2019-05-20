@@ -16,4 +16,4 @@ word2vecのモデルは[日本語Wikipediaエンティティモデル](http://ww
 
 ps．my_site.confはデフォルトのものと同じだと思います．
 
-[メイン画面](https://github.com/shoot16625/magical_banana/blob/master/image.png)
+![メイン画面](https://github.com/shoot16625/magical_banana/blob/master/image.png)
