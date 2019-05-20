@@ -5,7 +5,7 @@ notifications:
     email: false
 # command to install dependencies
 install:
-  - sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
+  - sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8 build-essential swig
   - pip install pycodestyle
   - pip install flake8
   - pip install autopep8
