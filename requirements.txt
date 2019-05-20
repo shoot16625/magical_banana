@@ -1,0 +1,6 @@
+numpy==1.15.2
+pandas==0.22.0
+django==1.11.8
+gensim==3.6
+mecab-python3==0.996.1
+ptvsd

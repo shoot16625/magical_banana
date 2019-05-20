@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Magical_Banana</title>
+  <style type="text/css" media="screen">
+    .out_word {
+      opacity: 0;
+      animation: appeare 0s ease 2s 1 normal forwards running;
+    }
+    @keyframes appeare {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+{% block body %}
+{% endblock %}
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+	<div class="jumbotron">
+		{% if input_flag  %}
+		<h2 class="text-center">無限連想ゲームにようこそ！！</h2><h4 class="text-center" style="margin:20px;">system<br>
+		「 {{ initial }} 」 といったら？</h4>
+		{% endif %}
+		{% if output_word %}
+		<h2 class="text-center">無限連想ゲームにようこそ！！</h2><h4 class="text-center" style="margin:20px;">system<br>
+		「 {{ input_word }} 」 といったら 「 {{ output_word }} 」</h4>
+		{% endif %}
+		{% if output_word %}
+		<h4 class="text-center out_word" style="margin:20px;">  「{{ output_word }}」といったら？</h4>
+		{% endif %}
+		<div class="text-center out_word">
+			<form action="" method="get">
+				<label class="text-left">入力
+				<input type="text" name="input_word" class="form-control"></label>
+			</form>
+		</div>
+		{% if new_word %}
+		<h4 class="text-center">  辞書登録がありません．</h4>
+		{% endif %}
+	</div>
+
+	{% if input_none %}
+	<div class="alert alert-success" role="alert">「禁止行為が行われました」</div>
+	{% endif %}
+
+	{% if losing_user1 %}
+	<div class="alert alert-info" role="alert">「一度出現した単語です！！」</div>
+	{% endif %}
+
+	{% if losing_user2 %}
+	<div class="alert alert-warning" role="alert">  違う気がするけど、まあいいか...</div>
+	{% endif %}
+
+
+	{% if output_word %}
+	<h4>既出単語</h4>
+	{% for word in previous_words %}
+	{% if forloop.counter0|divisibleby:"2" %}
+	<span style="background-color: gray; color: white;padding:5px;">
+		{{ word }}
+	</span>, 
+	{% else %}
+	<span>
+		{{ word }}
+	</span>, 
+	{% endif %}
+	{% endfor %}
+	{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  django-apache2:
+    container_name: 'magical_banana'
+    build: .
+    volumes:
+      - .:/var/www/html
+    tty: true
+    ports:
+      - 80:8000
+      - 3500:3500
+      - 8006:81
+    # restart: always
