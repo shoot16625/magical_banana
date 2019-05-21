@@ -8,12 +8,6 @@ AIを用いた無限連想ゲームです☆
 
 2．ブラウザでlocalhostに接続すると利用できます．
 
-word2vecのモデルは[日本語Wikipediaエンティティモデル](http://www.cl.ecei.tohoku.ac.jp/~m-suzuki/jawiki_vector)を使用しています．
-
-デフォルトでは，./data/entity_vector/entity_vector.model.binが使用されます．
-
-フォルダを作ってね．
-
-ps．my_site.confはデフォルトのものと同じだと思います．
+word2vecのモデルは，ライブドアニュースコーパスを使用しています．
 
 ![メイン画面](https://github.com/shoot16625/magical_banana/blob/master/image.png)

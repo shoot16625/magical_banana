@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from banana import models
 from gensim.models import KeyedVectors
+from gensim.models import word2vec
 
 
 initial_word = "パソコン"
 previous_words = [initial_word]
-FILE = "/var/www/html/data/entity_vector/entity_vector.model.bin"
-# FILE = "../data/entity_vector/entity_vector.model.bin"
-model = KeyedVectors.load_word2vec_format(FILE, binary=True)
+# FILE = "/var/www/html/data/entity_vector/entity_vector.model.bin"
+# model = KeyedVectors.load_word2vec_format(FILE, binary=True)
+FILE = "/var/www/html/data/livedoor_vec.model"
+model = word2vec.Word2Vec.load(FILE)
+
 print("load_view")
 
 def index(request):
